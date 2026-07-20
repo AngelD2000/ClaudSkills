@@ -1,0 +1,16 @@
+# Ignore everything by default...
+/*
+
+# ...then un-ignore only the shareable config
+!.gitignore
+!README.md
+!settings.json
+!skills/
+!commands/
+!agents/
+
+# Never commit secrets, local overrides, or scratch state
+settings.local.json
+.mcp.json
+skills/learn-workspace/
+skills/*/**/*.local.*

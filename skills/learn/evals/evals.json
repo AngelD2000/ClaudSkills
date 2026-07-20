@@ -1,0 +1,54 @@
+{
+  "skill_name": "learn",
+  "evals": [
+    {
+      "id": 0,
+      "name": "langchain-plan",
+      "prompt": "Help me learn LangChain for building AI agents. I'm a backend Python dev with a few years of experience but I've never touched LLM tooling before.",
+      "expected_output": "A course plan file classifying LangChain as tool-based: latest developments (via live search), how practitioners actually use it day-to-day, scalability/maintainability guidance, concrete examples, and 2-4 rubric-scored projects tailored to a backend dev new to LLM tooling.",
+      "files": [],
+      "expectations": [
+        "A plan file exists (e.g. under a learning-plans/ folder) referencing LangChain",
+        "Content reflects genuinely recent/current information about LangChain (specific version numbers, recent dates, or named recent changes), not just generic textbook description",
+        "Content explains how practitioners actually use LangChain day-to-day, at the workflow level, not just an API/feature list",
+        "Content addresses scalability or maintainability considerations for using LangChain well",
+        "Includes concrete examples tied to the content above, not generic filler examples",
+        "Includes 2-4 projects, each with a specific checkable rubric (not vague criteria like 'understand the concept')",
+        "The plan is pitched at a backend Python dev new to LLM tooling specifically, not a generic total-beginner-to-programming pitch",
+        "The agent actually used a web search tool during execution rather than relying purely on prior knowledge"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "behavioral-econ-plan",
+      "prompt": "I want to learn behavioral economics from scratch, make me a course plan.",
+      "expected_output": "A course plan file classifying behavioral economics as a research field: 5 mental models, 3 real expert disagreements with steelmanned arguments on both sides, 10 understanding-probing questions, concrete examples, and 2-4 rubric-scored projects.",
+      "files": [],
+      "expectations": [
+        "A plan file exists (e.g. under a learning-plans/ folder) referencing behavioral economics",
+        "Content includes 5 named mental models for the field, each with an explanation of how it changes how you see problems",
+        "Content includes 3 real expert disagreements, each with a genuinely steelmanned argument on both sides (not a strawman on one side)",
+        "Content includes 10 questions designed to probe real understanding vs. surface memorization",
+        "Includes concrete examples tied to the mental models/disagreements above, not generic filler examples",
+        "Includes 2-4 projects, each with a specific checkable rubric (not vague criteria like 'understand the concept')",
+        "The agent actually used a web search tool during execution to ground the disagreements/mental models rather than relying purely on prior knowledge"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "feedback-mode",
+      "prompt": "Here's what I did for the Feature Branch Workflow project from my git branching workflows plan: I made a branch called 'my-fix', committed everything in one commit that says 'made changes', merged it into main with a merge commit, and I haven't deleted the branch yet since I might need it later.",
+      "expected_output": "Feedback graded specifically against the existing rubric in learning-plans/git-branching-workflows.md: flags the generic branch name, single non-atomic commit, lack of rebase (merge commit used), and branch not deleted, without regenerating the plan.",
+      "files": [],
+      "expectations": [
+        "Feedback explicitly references the rubric criteria from the existing learning-plans/git-branching-workflows.md file rather than giving generic advice",
+        "Feedback flags the branch name 'my-fix' as not following the naming convention criterion",
+        "Feedback flags the single commit 'made changes' as not meeting the atomic-commits criterion",
+        "Feedback flags the merge commit as not meeting the rebase/no-merge-commit criterion",
+        "Feedback flags the branch not being deleted as not meeting that criterion",
+        "The response stays in feedback mode: it does not regenerate or rewrite the whole course plan",
+        "Feedback gives concrete, actionable next steps rather than only a pass/fail list"
+      ]
+    }
+  ]
+}
